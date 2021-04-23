@@ -29,11 +29,11 @@ if (isNaN(age || isNaN(km))) {
 
     if (age <= 18) {
         prezzo = prezzo * 0.8;
-        var msg = document.getElementById("msg").innerHTML = "dato che sei un cucciolo ti abbiamo fattto il 20% DI SCONTO, perciò dovrai solo pagare ------ " + prezzo.toFixed(2) + "  €";
+        var msg = document.getElementById("msg").innerHTML = "dato che sei un cucciolo ti abbiamo fatto il 20% DI SCONTO, perciò dovrai solo pagare ------ " + prezzo.toFixed(2) + "  €";
     }
     else if (age >= 65) {
         prezzo = prezzo * 0.6;
-        var msg = document.getElementById("msg").innerHTML = "dato che sei un veterano ti abbiamo fattto il 40% DI SCONTO, perciò dovrai solo pagare ------ " + prezzo.toFixed(2) + "  €";
+        var msg = document.getElementById("msg").innerHTML = "dato che sei un veterano ti abbiamo fatto il 40% DI SCONTO, perciò dovrai solo pagare ------ " + prezzo.toFixed(2) + "  €";
     } else if (age > 110) {
         console.log("se sei arrivato veramente a questa età e vuoi prendere il treno te lo pago io il biglietto");
     } else {
