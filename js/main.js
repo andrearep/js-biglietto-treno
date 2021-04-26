@@ -1,15 +1,13 @@
 //chiediamo all'utente km e età
 var km = parseInt(prompt("mi dica un po', quanti chilometri vuole percorrere?"));
-var age = parseInt(prompt("quanti anni ha?"));
 console.log(km);
+
+var age = parseInt(prompt("quanti anni ha?"));
 console.log(age);
-
-//variabile prezzp
-
 
 // validazione valori inseriti
 
-if (isNaN(age || isNaN(km))) {
+if (isNaN(age) || isNaN(km)) {
     console.log("La tua età non può essere un testo, sei di questo pianeta?");
 } else if (age < 0) {
 
@@ -23,17 +21,21 @@ if (isNaN(age || isNaN(km))) {
 
     var msg = document.getElementById("msg").innerHTML = ("fammi capire come posso esserti d'aiuto allora, hai bisogno solo di qualcuno con cui parlare?");
 
-} else {
+} else if (km > 10000) {
+    var msg = document.getElementById("msg").innerHTML = ("Vuoi andare sulla luna? mi spiace ma facciamo già fatica con dstanze umane.");
+}
+//Calcolo prezzo per età 
+else {
     //calcolo prezzo
     var prezzo = km * 0.21;
 
     if (age <= 18) {
-        prezzo = prezzo * 0.8;
+        prezzo *= 0.8;
         var msg = document.getElementById("msg").innerHTML = "dato che sei un cucciolo ti abbiamo fatto il 20% DI SCONTO, perciò dovrai solo pagare ------ " + prezzo.toFixed(2) + "  €";
     }
     else if (age >= 65) {
-        prezzo = prezzo * 0.6;
-        var msg = document.getElementById("msg").innerHTML = "dato che sei un veterano ti abbiamo fatto il 40% DI SCONTO, perciò dovrai solo pagare ------ " + prezzo.toFixed(2) + "  €";
+        prezzo *= 0.6;
+        var msg = document.getElementById("msg").innerHTML = "dato che sei un veterano ti abbiamo fat4to il 40% DI SCONTO, perciò dovrai solo pagare ------ " + prezzo.toFixed(2) + "  €";
     } else if (age > 110) {
         console.log("se sei arrivato veramente a questa età e vuoi prendere il treno te lo pago io il biglietto");
     } else {
